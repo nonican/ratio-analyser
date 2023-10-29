@@ -1,0 +1,8 @@
+.read sql/schema.sql
+.mode csv
+.import netflix_balance.csv Balance_sheet
+.read sql/current_ratio.sql
+.read sql/debt_to_asset_ratio.sql
+.output ratio_analysis.csv
+SELECT date,description,measure FROM Analysis ORDER BY date;
+.quit
